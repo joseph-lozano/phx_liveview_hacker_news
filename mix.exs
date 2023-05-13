@@ -44,7 +44,8 @@ defmodule HN.MixProject do
       {:telemetry_poller, "~> 1.0"},
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
-      {:finch, "~> 0.16"}
+      {:finch, "~> 0.16"},
+      {:tailwind_formatter, "~> 0.3.5", only: :dev, runtime: false}
     ]
   end
 

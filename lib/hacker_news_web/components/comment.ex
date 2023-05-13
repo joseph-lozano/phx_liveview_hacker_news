@@ -30,9 +30,9 @@ defmodule HNWeb.Components.Comment do
           [+]
         </span>
       </div>
-      <p :if={@open} class="text-sm mt-4">
+      <p :if={@open} class="mt-4 text-sm">
         <%= Phoenix.HTML.raw(@content) %>
-        <div :for={comment <- @comments} class="my-4 mx-8">
+        <div :for={comment <- @comments} class="mx-8 my-4">
           <.live_component
             module={HNWeb.Components.Comment}
             id={comment["id"]}

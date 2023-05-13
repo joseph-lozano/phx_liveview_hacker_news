@@ -1,5 +1,5 @@
 [
   import_deps: [:phoenix],
-  plugins: [Phoenix.LiveView.HTMLFormatter],
+  plugins: [TailwindFormatter.MultiFormatter],
   inputs: ["*.{heex,ex,exs}", "{config,lib,test}/**/*.{heex,ex,exs}"]
 ]

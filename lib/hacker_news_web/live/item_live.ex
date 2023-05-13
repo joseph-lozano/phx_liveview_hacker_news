@@ -32,7 +32,7 @@ defmodule HNWeb.ItemLive do
           </.link>
         </div>
       </div>
-      <div :for={comment <- @item["comments"]} class="my-4 mx-8">
+      <div :for={comment <- @item["comments"]} class="mx-8 my-4">
         <.live_component
           module={HNWeb.Components.Comment}
           id={comment["id"]}
