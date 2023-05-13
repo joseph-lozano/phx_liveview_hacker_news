@@ -2,13 +2,13 @@
   <header class="bg-[#ff6600] px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between border-b border-zinc-100 py-3 text-sm">
       <div class="flex items-center gap-4">
-        <.link patch={~p"/"} class="text-[#f6f6ef] rounded-full px-2 font-bold leading-6 text-2xl">
+        <.link patch={~p"/"} class={["text-[#f6f6ef] rounded-full px-2 font-bold leading-6 text-2xl"]}>
           Hacker News
         </.link>
-        <.link patch={~p"/new"} class="text-xl font-medium">new</.link>
-        | <.link patch={~p"/show"} class="text-xl font-medium">show</.link>
-        | <.link patch={~p"/ask"} class="text-xl font-medium">ask</.link>
-        | <.link patch={~p"/jobs"} class="text-xl font-medium">jobs</.link>
+        <.link patch={~p"/new"} class={["font-medium text-xl",  @live_action == :newest && "text-white"]}>new</.link>
+        | <.link patch={~p"/show"} class={["font-medium text-xl",  @live_action == :show && "text-white"]}>show</.link>
+        | <.link patch={~p"/ask"} class={["font-medium text-xl",  @live_action == :ask && "text-white"]}>ask</.link>
+        | <.link patch={~p"/jobs"} class={["font-medium text-xl",  @live_action == :jobs && "text-white"]}>jobs</.link>
       </div>
     </div>
   </header>
