@@ -13,9 +13,10 @@ defmodule HN.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: HN.PubSub},
       # Start the Endpoint (http/https)
-      HNWeb.Endpoint
+      HNWeb.Endpoint,
       # Start a worker by calling: HN.Worker.start_link(arg)
       # {HN.Worker, arg}
+      {Finch, name: HN.Finch}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

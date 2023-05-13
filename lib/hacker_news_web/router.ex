@@ -17,7 +17,8 @@ defmodule HNWeb.Router do
   scope "/", HNWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    live "/", HomeLive
+    live "/items/:id", ItemLive
   end
 
   # Other scopes may use custom stacks.
