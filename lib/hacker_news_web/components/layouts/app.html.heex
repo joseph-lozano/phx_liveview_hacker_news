@@ -2,24 +2,18 @@
   <header class="bg-[#ff6600] px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between border-b border-zinc-100 py-3 text-sm">
       <div class="flex items-center gap-4">
-        <.link
-          navigate={~p"/"}
-          class="text-[#f6f6ef] rounded-full px-2 font-bold leading-6 text-2xl"
-        >
+        <.link patch={~p"/"} class="text-[#f6f6ef] rounded-full px-2 font-bold leading-6 text-2xl">
           Hacker News
         </.link>
-        <p class="text-xl font-medium">new</p>
-        |
-        <p class="text-xl font-medium">show</p>
-        |
-        <p class="text-xl font-medium">ask</p>
-        |
-        <p class="text-xl font-medium">jobs</p>
+        <.link patch={~p"/new"} class="text-xl font-medium">new</.link>
+        | <.link patch={~p"/show"} class="text-xl font-medium">show</.link>
+        | <.link patch={~p"/ask"} class="text-xl font-medium">ask</.link>
+        | <.link patch={~p"/jobs"} class="text-xl font-medium">jobs</.link>
       </div>
     </div>
   </header>
   <main class="lg:px-16 grow">
-    <div class="mx-auto max-w-7xl bg-[#f6f6ef] h-full">
+    <div class="md:mx-auto mx-1 max-w-7xl bg-[#f6f6ef] h-full">
       <.flash_group flash={@flash} />
       <%= @inner_content %>
     </div>

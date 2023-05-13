@@ -17,7 +17,11 @@ defmodule HNWeb.Router do
   scope "/", HNWeb do
     pipe_through :browser
 
-    live "/", HomeLive
+    live "/", HomeLive, :news
+    live "/new", HomeLive, :newest
+    live "/show", HomeLive, :show
+    live "/ask", HomeLive, :ask
+    live "/jobs", HomeLive, :jobs
     live "/items/:id", ItemLive
   end
 
